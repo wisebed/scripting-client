@@ -234,7 +234,7 @@
 	</properties>
 
 	<scm>
-		<connection>scm:git:git@github.com:danbim/wisebed-scripting-client.git</connection>
+		<connection>scm:git:git@github.com:wisebed/scripting-client.git</connection>
 	</scm>
 
 </project>
