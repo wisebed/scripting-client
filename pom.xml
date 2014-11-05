@@ -149,36 +149,29 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		<extensions>
-			<extension>
-				<groupId>org.apache.maven.wagon</groupId>
-				<artifactId>wagon-ssh-external</artifactId>
-				<version>2.2</version>
-			</extension>
-		</extensions>
 	</build>
 	
 	<repositories>
-		<repository>
-			<id>wisebed-maven-repository-releases</id>
-			<url>http://wisebed.eu/maven/releases/</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-		<repository>
-			<id>wisebed-maven-repository-snapshots</id>
-			<url>http://wisebed.eu/maven/snapshots/</url>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
+        <repository>
+            <id>wisebed-releases</id>
+            <url>http://maven.itm.uni-luebeck.de/content/repositories/wisebed-releases/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>wisebed-snapshots</id>
+            <url>http://maven.itm.uni-luebeck.de/content/repositories/wisebed-snapshots/</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
 		<repository>
 			<id>itm-maven-repository-releases</id>
 			<url>http://www.itm.uni-luebeck.de/projects/maven/releases/</url>
@@ -200,19 +193,19 @@
 			</snapshots>
 		</repository>
 	</repositories>
-	
-	<distributionManagement>
-		<repository>
-			<id>wisebed-maven-repository-releases</id>
-			<name>WISEBED Maven releases repository</name>
-			<url>scpexe://itm01.itm.uni-luebeck.de/www/wisebeds/maven/releases</url>
-		</repository>
-		<snapshotRepository>
-			<id>wisebed-maven-repository-snapshots</id>
-			<name>WISEBED Maven snapshots repository</name>
-			<url>scpexe://itm01.itm.uni-luebeck.de/www/wisebeds/maven/snapshots</url>
-		</snapshotRepository>
-	</distributionManagement>
+
+    <distributionManagement>
+        <repository>
+            <id>wisebed-releases</id>
+            <name>WISEBED Releases Repository</name>
+            <url>http://maven.itm.uni-luebeck.de/content/repositories/wisebed-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>wisebed-snapshots</id>
+            <name>WISEBED Snapshots Repository</name>
+            <url>http://maven.itm.uni-luebeck.de/content/repositories/wisebed-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>	
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
